@@ -4,14 +4,19 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { TodosState, Todo } from "../types/types";
 
 const loadTodosFromLocalStorage = (): Todo[] => {
-  const serializedTodos = localStorage.getItem("todos");
-  if (serializedTodos === null) return [];
-  return JSON.parse(serializedTodos);
+  if (typeof window !== "undefined") {
+    const serializedTodos = localStorage.getItem("todos");
+    if (serializedTodos === null) return [];
+    return JSON.parse(serializedTodos);
+  }
+  return [];
 };
 
 const saveTodosToLocalStorage = (todos: Todo[]) => {
-  const serializedTodos = JSON.stringify(todos);
-  localStorage.setItem("todos", serializedTodos);
+  if (typeof window !== "undefined") {
+    const serializedTodos = JSON.stringify(todos);
+    localStorage.setItem("todos", serializedTodos);
+  }
 };
 
 const initialState: TodosState = {
