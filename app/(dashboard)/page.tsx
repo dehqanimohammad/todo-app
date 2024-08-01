@@ -7,7 +7,7 @@ import CompletedTasksList from "@/components/CompletedTasksList";
 const page = () => {
   return (
     <main className="mx-3">
-      <div className="flex flex-col-reverse md:flex-row">
+      <div className="flex flex-col-reverse lg:flex-row">
         <InputComponent />
         <ReportGraph />
       </div>

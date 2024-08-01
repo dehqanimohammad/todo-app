@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Tailwind CSS with custom CSS for the skewed line */
+.skewed-line {
+  display: inline-block; /* Ensure the element is inline for the text */
+  position: relative; /* Relative positioning for the pseudo-element */
+  color: #2f3a5899; /* Text color */
+  font-size: 16px; /* Example font size */
+  font-weight: 500; /* Font weight */
+  text-decoration: none; /* Remove default underline */
+}
+
+/* Pseudo-element for the line */
+.skewed-line::before {
+  content: ""; /* Empty content for the pseudo-element */
+  position: absolute; /* Position absolutely relative to the text */
+  width: 102%; /* Slightly longer than the text */
+  height: 1px; /* Line thickness */
+  background-color: #000; /* Line color */
+  top: 45%; /* Vertically center the line */
+  left: -5%; /* Start the line slightly before the text */
+  transform: rotate(-5deg); /* Skewed line effect */
+  transform-origin: center; /* Transform origin at the center */
+}

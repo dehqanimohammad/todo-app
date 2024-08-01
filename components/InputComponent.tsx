@@ -25,12 +25,13 @@ const InputComponent = () => {
 
   const handleAddTodo = () => {
     if (input.trim() === "") return;
+    if (error != null) return;
     dispatch(addTodo(input));
     setInput("");
   };
 
   return (
-    <div className="border mt-9 sm:mt-0 border-gray-200 rounded-md pb-3 w-full">
+    <div className="border mt-9 lg:mt-0 border-gray-200 rounded-md pb-3 w-full">
       <div className="flex items-center  pt-2 ps-3">
         <p className="font-bold">افزودن تسک جدید</p>
         {error && <span className="ps-4 text-xs text-red-600">{error}</span>}
