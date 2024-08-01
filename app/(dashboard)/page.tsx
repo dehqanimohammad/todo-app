@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 import InProgressTasks from "@/components/InProgressTasks";
 import CompletedTasksList from "@/components/CompletedTasksList";
 
-const page = () => {
+const Page = () => {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -26,4 +26,4 @@ const page = () => {
   }
 };
 
-export default page;
+export default Page;

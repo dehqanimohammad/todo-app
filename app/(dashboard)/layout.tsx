@@ -4,7 +4,7 @@ import store from "@/store/store";
 import React, { ReactNode } from "react";
 import { Provider } from "react-redux";
 
-const layout = ({ children }: { children: ReactNode }) => {
+const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <Provider store={store}>
       <div className="max-w-screen-lg mt-10 mx-auto">{children}</div>;
@@ -12,4 +12,4 @@ const layout = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export default layout;
+export default Layout;
