@@ -1,3 +1,6 @@
+Deployed website 
+https://todo-app-gamma-flax.vercel.app/
+
 Overview<br />
 This project is a simple todo application built using Next.js, Redux, Tailwind CSS, and local storage. It allows users to create, edit, and delete todos. <br />
 
